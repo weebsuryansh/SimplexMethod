@@ -161,7 +161,7 @@ def Simplex(A: List[List[float]], b: List[float], c: List[float]):
         print(base_vectors)
 
         tableau, b = gaussian(tableau, b, next_var, leaving_var)
-        if b == [-1]:
+        if b.all() == -1:
             return None, "Infeasible"
 
         print("tableau")
